@@ -1,0 +1,99 @@
+section = movieplayer
+
+ window = main
+
+  base = main, -2, -2
+
+  button = exit,     356,   4, 33, 27, evExit
+  button = minimize, 269,   7, 22, 18, evIconify
+  button = prefs,    323,   4, 33, 27, evPreferences
+
+  button = subload,   64,  50, 22, 18, evLoadSubtitle
+  button = playlist,  20,  50, 22, 18, evPlaylist
+  button = eqb,       42,  50, 22, 18, evEqualizer
+  button = maximize, 291,   7, 22, 18, evFullScreen
+  button = mute,     269,  46, 22, 18, evMute
+
+  button = prev,      23,  86, 33, 22, evPrev
+  button = rev,       53,  86, 33, 22, evBackward10sec
+  button = pause,     83,  86, 38, 26, evPauseSwitchToPlay
+  button = play,      83,  86, 38, 26, evPlaySwitchToPause
+  button = forward,  121,  86, 33, 22, evForward10sec
+  button = next,     151,  86, 33, 22, evNext
+  button = stop,     181,  86, 33, 22, evStop
+  button = load,     211,  86, 33, 22, evLoadPlay
+
+  button = about,    301,  86, 78, 27, evAbout
+
+  hpotmeter = pos, 00, 00, progres, 100, 0,  25, 70, 347, 14, evSetMoviePosition
+  hpotmeter = pos, 00, 00, volume,   26, 50, 291, 41,  78, 26, evSetVolume
+
+  font =  symbols, symbols2
+  font =     font, font-pl
+  font = symbolsg, symbols2
+
+  dlabel =  25, 14, 175, 0,    font, "$t - $o  "
+
+  dlabel =  26, 33,  28, 0, symbols, "$T"
+  dlabel =  54, 33,  15, 0, symbols, "$l"
+  dlabel =  54, 33,  15, 0, symbols, "$e"
+  dlabel =  54, 33,  15, 0, symbols, "$s"
+  dlabel =  70, 34,  55, 0,    font, "$1"
+  dlabel = 118, 34,   7, 0,    font, "/"
+  dlabel = 123, 34,  55, 0,    font, "$6"
+
+ end
+
+ window = sub
+
+  base = subpic, -1,-1, 640, 480
+  background =   0,  0,  0
+
+ end
+
+ window = menu
+
+  ; base=bitmap
+  base = menu
+
+  selected = menus
+
+  menu = 3,   6, 122, 14, evAbout
+  menu = 3,  28, 122, 14, evLoad
+  menu = 3,  43, 122, 14, evNone         ; Add playlist
+  menu = 3,  60, 122, 14, evPlay
+  menu = 3,  84, 122, 14, evPlaylist
+  menu = 3, 100, 122, 14, evEqualizer
+
+  menu = 3, 116, 122, 14, evSkinBrowser
+  menu = 3, 140, 122, 14, evPreferences
+  menu = 3, 180, 122, 14, evNormalSize
+  menu = 3, 196, 122, 14, evDoubleSize
+  menu = 3, 212, 122, 14, evFullScreen
+  menu = 3, 228, 122, 14, evIconify
+  menu = 3, 244, 122, 14, evExit
+ end
+
+ window = playbar
+  base = playbar, -1, -2
+
+  button = barstop,   181, 12,  30, 22, evStop
+  button = barplay,    83, 12,  38, 22, evPlaySwitchToPause
+  button = barpause,   83, 12,  38, 22, evPauseSwitchToPlay
+
+  button = barrev ,    53, 12,  30, 22 , evBackward10sec
+  button = barfwd,    121, 12,  38, 22, evForward10sec
+
+  button = barprev,    23, 12,  30, 22, evPrev
+  button = barnext,   151, 12,  30, 22, evNext
+
+  button = prefs,     323,  4,  33, 27, evPreferences
+  button = exit,      356,  4,  33, 27, evExit
+
+  hpotmeter = NULL, 0, 0, progres, 100,  0,  26, 37, 345, 14, evSetMoviePosition
+  hpotmeter = NULL, 0, 0, subvol,   27, 50, 227,  9,  79, 26, evSetVolume
+
+ end
+
+end
+
